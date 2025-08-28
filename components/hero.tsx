@@ -1,20 +1,42 @@
+"use client"
+
 import { Button } from "./ui/button"
 import { ArrowRight } from "lucide-react"
 import { ProfilePicture } from "./ui/logo"
+import { motion } from "framer-motion";
+import LoadingDots from "./loadingdots";
 
 export default function Hero() {
     return (
         <section className="pt-32 pb-20 px-6" id="hero">
         <div className="max-w-6xl mx-auto flex flex-wrap">
-            <ProfilePicture src="/pictures/sampic.jpg" size={180}/>
-          <div className="max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <ProfilePicture src="/pictures/sampic.jpg" size={175}/>
+          </motion.div>
+          <motion.div 
+            className="max-w-3xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
+          >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight pl-10">
               Samannyo
-              <span className="block text-orange-500">Pal . . .</span>
+              <span className="block text-orange-500">Pal
+                <LoadingDots/>
+              </span>
             </h1>
-          </div>
+          </motion.div>
         </div>
-        <div className="max-w-6xl mx-auto flex flex-wrap">
+        <motion.div 
+          className="max-w-6xl mx-auto flex flex-wrap mt-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
+        >
           <div>
             <p className="text-xl text-muted-foreground leading-relaxed">
               "If debugging is the process of removing bugs, then programming is the process of putting them in."
@@ -33,7 +55,7 @@ export default function Hero() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     )
 }

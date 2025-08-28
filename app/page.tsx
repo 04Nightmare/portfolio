@@ -33,7 +33,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 */}
             <Project1/>
 

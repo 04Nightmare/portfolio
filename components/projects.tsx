@@ -2,33 +2,37 @@ import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 import Github from "./assets/SVG/github";
 
 const Project1 = () => {
     return(
-        <Card className="group hover:shadow-lg transition-all duration-300">
-              <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 rounded-t-lg"></div>
+        <Card className="group hover:shadow-lg transition-all duration-300 hover:bg-gray-900">
+              <div className="relative aspect-video rounded-t-lg overflow-hidden">
+                <Image src="/pictures/circulate.JPG" alt={""} fill className="object-cover"/>
+              </div>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-lg mb-2">E-Commerce Platform</h3>
+                <h3 className="font-semibold text-lg mb-2">Circulate</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  A modern e-commerce solution built with Next.js, featuring real-time inventory, payment processing,
-                  and admin dashboard.
+                  An End to End secure and encrypted file sharing app with authentication, client side encryption, table to view sent and received files and profile management.
                 </p>
                 <div className="flex flex-wrap gap-1 mb-4">
                   <Badge variant="secondary" className="text-xs">
-                    Next.js
+                    Rust
                   </Badge>
                   <Badge variant="secondary" className="text-xs">
-                    Stripe
+                    Next.js
                   </Badge>
                   <Badge variant="secondary" className="text-xs">
                     PostgreSQL
                   </Badge>
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
-                    <Github/>
-                    Code
+                  <Button asChild variant="outline" size="sm">
+                    <a href="https://github.com/SamannyoPal/Circulate" target="_blank" rel="noopener noreferrer">
+                      <Github/>
+                      Code
+                    </a>
                   </Button>
                   <Button variant="outline" size="sm">
                     <ExternalLink className="mr-1 h-3 w-3" />
@@ -42,7 +46,7 @@ const Project1 = () => {
 
 const Project2 = () => {
     return(
-        <Card className="group hover:shadow-lg transition-all duration-300">
+        <Card className="group hover:shadow-lg transition-all duration-300 hover:bg-gray-900">
               <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 rounded-t-lg"></div>
               <CardContent className="p-6">
                 <h3 className="font-semibold text-lg mb-2">Task Management App</h3>
@@ -78,7 +82,7 @@ const Project2 = () => {
 
 const Project3 = () => {
     return(
-        <Card className="group hover:shadow-lg transition-all duration-300">
+        <Card className="group hover:shadow-lg transition-all duration-300 hover:bg-gray-900">
               <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-t-lg"></div>
               <CardContent className="p-6">
                 <h3 className="font-semibold text-lg mb-2">Analytics Dashboard</h3>
