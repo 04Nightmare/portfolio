@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import { ContactForm } from "./ui/contactform";
 
 export default function Contact() {
     return(
@@ -10,10 +11,7 @@ export default function Contact() {
             I'm always interested in new opportunities and exciting projects. Whether you have a question or just want
             to say hi, I'll try my best to get back to you!
           </p>
-          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-            <Mail className="mr-2 h-4 w-4" />
-            Get In Touch
-          </Button>
+          <ContactForm/>
         </div>
       </section>
     )
