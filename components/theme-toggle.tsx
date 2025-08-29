@@ -8,7 +8,6 @@ export function ThemeToggle() {
   const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
-    // Check initial theme from HTML class
     const htmlElement = document.documentElement
     setIsDark(htmlElement.classList.contains("dark"))
   }, [])
@@ -25,7 +24,7 @@ export function ThemeToggle() {
   }
 
   return (
-    <Button variant="ghost" size="sm" onClick={toggleTheme} className="w-9 h-9 p-0" aria-label="Toggle theme">
+    <Button variant="ghost" size="sm" onClick={toggleTheme} className="w-9 h-9 p-0 flex justify-center" aria-label="Toggle theme">
       {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </Button>
   )
