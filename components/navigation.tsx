@@ -9,11 +9,11 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     return (
-        <nav className="fixed top-0 w-full bg-background/70 backdrop-blur-sm border-b z-50">
+        <nav className="fixed top-0 w-full bg-background/60 backdrop-blur-lg border-b z-50">
                 <div className="max-w-6xl mx-auto px-6 py-4">
                   <div className="flex items-center justify-between">
                     <div className="font-bold text-xl" onClick={() => {document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" })}}>
-                            Portfolio
+                            04Nightmare
                     </div>
                     {/* Desktop Links */}
                     <div className="flex items-center gap-4">

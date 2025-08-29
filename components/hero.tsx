@@ -38,10 +38,10 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
         >
           <div>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               "If debugging is the process of removing bugs, then programming is the process of putting them in."
             </p>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">--by me</p>
+            {/* <p className="text-xl text-muted-foreground mb-8 leading-relaxed">--by me</p> */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white"
               onClick={() => {document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}}>

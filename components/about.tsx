@@ -43,7 +43,7 @@ export default function AboutMe() {
               </div>
               <div className="flex gap-4">
                 <Button asChild variant="outline" size="sm">
-                    <a href="https://github.com/SamannyoPal" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/04Nightmare" target="_blank" rel="noopener noreferrer">
                         <Github />
                         GitHub
                     </a>

@@ -13,7 +13,7 @@ export default function Footer() {
           <p className="text-muted-foreground text-sm">© Portfolio. Built with Next.js by Samannyo Pal. 💙</p>
           <div className="flex gap-4">
             <Button asChild variant="ghost" size="lg">
-            <a href="https://github.com/SamannyoPal" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/04Nightmare" target="_blank" rel="noopener noreferrer">
                 <Github />
             </a>
             </Button>
