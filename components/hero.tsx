@@ -9,7 +9,7 @@ import LoadingDots from "./loadingdots";
 export default function Hero() {
     return (
         <section className="pt-32 pb-20 px-6" id="hero">
-        <div className="max-w-6xl mx-auto flex flex-wrap">
+        <div className="max-w-6xl mx-auto flex flex-wrap gap-x-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -18,12 +18,12 @@ export default function Hero() {
             <ProfilePicture src="/pictures/sampic.jpg" size={175}/>
           </motion.div>
           <motion.div 
-            className="max-w-3xl"
+            className="max-w-3xl flex flex-col justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight md:pl-10">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight ">
               Samannyo
               <span className="block text-orange-500">Pal
                 <LoadingDots/>
@@ -43,7 +43,8 @@ export default function Hero() {
             </p>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">--by me</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white"
+              onClick={() => {document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}}>
                 View My Work
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

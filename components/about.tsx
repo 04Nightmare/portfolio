@@ -22,7 +22,7 @@ export default function AboutMe() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-30 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-5">About Me</h2>
+              <h2 className="text-3xl font-bold mb-5 underline">Sam.details</h2>
               <div className="text-muted-foreground mb-3 leading-relaxed">
                 <span className="text-lg"> Location:</span>
                 <div className="px-4">
