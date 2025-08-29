@@ -7,7 +7,7 @@ import Github from "./assets/SVG/github";
 
 const Project1 = () => {
     return(
-        <Card className="group hover:shadow-lg transition-all duration-300 hover:bg-gray-900">
+        <Card className="group hover:shadow-lg transition-all duration-300 dark:hover:bg-gray-900 hover:bg-gray-100">
               <div className="relative aspect-video rounded-t-lg overflow-hidden">
                 <Image src="/pictures/circulate.JPG" alt={""} fill className="object-cover"/>
               </div>
@@ -34,10 +34,10 @@ const Project1 = () => {
                       Code
                     </a>
                   </Button>
-                  <Button variant="outline" size="sm">
+                  {/* <Button variant="outline" size="sm">
                     <ExternalLink className="mr-1 h-3 w-3" />
                     Live Demo
-                  </Button>
+                  </Button> */}
                 </div>
               </CardContent>
             </Card>
@@ -46,7 +46,7 @@ const Project1 = () => {
 
 const Project2 = () => {
     return(
-        <Card className="group hover:shadow-lg transition-all duration-300 hover:bg-gray-900">
+        <Card className="group hover:shadow-lg transition-all duration-300 dark:hover:bg-gray-900 hover:bg-gray-100">
               <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 rounded-t-lg"></div>
               <CardContent className="p-6">
                 <h3 className="font-semibold text-lg mb-2">Task Management App</h3>
@@ -82,7 +82,7 @@ const Project2 = () => {
 
 const Project3 = () => {
     return(
-        <Card className="group hover:shadow-lg transition-all duration-300 hover:bg-gray-900">
+        <Card className="group hover:shadow-lg transition-all duration-300 dark:hover:bg-gray-900 hover:bg-gray-100">
               <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-t-lg"></div>
               <CardContent className="p-6">
                 <h3 className="font-semibold text-lg mb-2">Analytics Dashboard</h3>

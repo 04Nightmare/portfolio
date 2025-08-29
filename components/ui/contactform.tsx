@@ -25,7 +25,7 @@ export function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Form submitted:", form)
-    // You can connect this to EmailJS, Nodemailer, or API route
+    // EmailJS, Nodemailer, or API route
   }
 
   return (

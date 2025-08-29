@@ -23,7 +23,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight pl-10">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight md:pl-10">
               Samannyo
               <span className="block text-orange-500">Pal
                 <LoadingDots/>
