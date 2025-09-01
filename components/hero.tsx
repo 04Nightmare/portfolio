@@ -3,8 +3,9 @@
 import { Button } from "./ui/button"
 import { ArrowRight } from "lucide-react"
 import { ProfilePicture } from "./ui/logo"
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import LoadingDots from "./loadingdots";
+import { useRef } from "react";
 
 export default function Hero() {
     return (

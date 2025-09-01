@@ -6,11 +6,44 @@ import LinkedIn from "./assets/SVG/linkdin";
 import Instagram from "./assets/SVG/insta";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Next from "./assets/SVG/next";
+import AWS from "./assets/SVG/aws";
+import Docker from "./assets/SVG/docker";
+import { TbBrandMysql, TbBrandSocketIo } from 'react-icons/tb';
+import { BiLogoPostgresql } from 'react-icons/bi';
+import { SiHiveBlockchain, SiTypescript } from 'react-icons/si';
+import { FaRust, FaJava, FaPython } from 'react-icons/fa';
+import { BsFiletypeSql } from 'react-icons/bs';
+import CPP from "./assets/SVG/cpp";
+
+
+
 
 
 export default function AboutMe() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-100px" });
+  const technology = [
+    {name: "Next.js", icon: <Next/>},
+    {name: "Axum", icon: <FaRust/>},
+    {name: "MySQL", icon:<TbBrandMysql/>},
+    {name: "PostgreSQL", icon: <BiLogoPostgresql/>},
+    {name: "WebSockets", icon: <TbBrandSocketIo/>},
+    {name: "Blockchain", icon: <SiHiveBlockchain/>},
+    {name: "Github", icon: <Github/>},
+    {name: "AWS", icon: <AWS/>},
+    {name: "Docker", icon: <Docker/>},
+  ]
+
+  const language = [
+    {name: "C", icon: <CPP/>},
+    {name: "C++", icon: <CPP/>},
+    {name: "Rust", icon: <FaRust/>},
+    {name: "Java", icon: <FaJava/>},
+    {name: "SQL", icon: <BsFiletypeSql/>},
+    {name: "Js/Ts", icon: <SiTypescript/>},
+    {name: "Python", icon: <FaPython/>},
+  ]
     return(
         <section id="about" className="py-20 px-6 bg-muted/30" ref={ref}>
         <motion.div
@@ -64,24 +97,22 @@ export default function AboutMe() {
             </div>
             <div className="space-y-6">
               <div>
-                <h3 className="font-semibold mb-3">Technologies</h3>
+                <h3 className="font-semibold mb-3 text-xl">Technologies</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Next.js", "Axum",  "MySQL", "PostgreSQL", "WebSockets", "Blockchain", "Github","AWS", "Docker"].map(
-                    (skill) => (
-                      <Badge key={skill} variant="secondary">
-                        asdasd{skill}
+                  {technology.map(({name, icon}) => (
+                    <Badge key={name} variant="secondary" className="dark:hover:bg-gray-600 hover:bg-gray-200">
+                        {icon}{name}
                       </Badge>
-                    ),
-                  )}
+                  ))}
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold mb-3">Languages</h3>
+                <h3 className="font-semibold mb-3 text-xl">Languages</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["C", "Rust", "Java", "SQL", "js/ts", "Python"].map((tool) => (
-                    <Badge key={tool} variant="outline">
-                      {tool}
-                    </Badge>
+                  {language.map(({name, icon}) => (
+                    <Badge key={name} variant="secondary" className="dark:hover:bg-gray-600 hover:bg-gray-200">
+                        {icon}{name}
+                      </Badge>
                   ))}
                 </div>
               </div>
