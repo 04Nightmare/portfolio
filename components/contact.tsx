@@ -4,9 +4,17 @@ import { ContactForm } from "./ui/contactform";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+interface FormData{
+  name: string;
+  email: string;
+  mobile: string;
+  subject: string;
+  message: string;
+}
+
 export default function Contact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: false, margin: "-100px" })
     return(
     <section id="contact" className="py-20 px-6 bg-muted/30" ref={ref}>
         <div className="max-w-4xl mx-auto text-center">
@@ -16,7 +24,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-6xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-6">Let's Work Together</h2>
+            <h2 className="text-4xl font-bold mb-6">Let's Work Together</h2>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}

@@ -10,7 +10,7 @@ import { motion, useInView } from "framer-motion";
 
 export default function AboutMe() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px" });
     return(
         <section id="about" className="py-20 px-6 bg-muted/30" ref={ref}>
         <motion.div
@@ -22,7 +22,7 @@ export default function AboutMe() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-30 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-5 underline">Sam.details</h2>
+              <h2 className="text-4xl font-bold mb-5 underline">Sam.details</h2>
               <div className="text-muted-foreground mb-3 leading-relaxed">
                 <span className="text-lg"> Location:</span>
                 <div className="px-4">
@@ -32,7 +32,7 @@ export default function AboutMe() {
               <div className="text-muted-foreground mb-3 leading-relaxed">
                 <span className="text-lg"> Interests:</span>
                 <div className="px-4">
-                  Coding, PC building, Piano, Swimming....
+                  Coding, PC building, Piano, Swimming, Cube Solving....
                 </div>
               </div>
               <div className="text-muted-foreground mb-6 leading-relaxed">
@@ -66,10 +66,10 @@ export default function AboutMe() {
               <div>
                 <h3 className="font-semibold mb-3">Technologies</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Next.js", "Axum", "MySQL", "PostgreSQL", "WebSockets", "Blockchain", "Github","AWS", "Docker"].map(
+                  {["Next.js", "Axum",  "MySQL", "PostgreSQL", "WebSockets", "Blockchain", "Github","AWS", "Docker"].map(
                     (skill) => (
                       <Badge key={skill} variant="secondary">
-                        {skill}
+                        asdasd{skill}
                       </Badge>
                     ),
                   )}

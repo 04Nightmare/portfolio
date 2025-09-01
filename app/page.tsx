@@ -15,7 +15,7 @@ import { useInView, motion } from "framer-motion"
 
 export default function Portfolio() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: false, margin: "-100px" })
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -37,7 +37,7 @@ export default function Portfolio() {
         >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               A selection of recent work that showcases my skills in full-stack development, UI/UX design, and
               problem-solving.

@@ -8,8 +8,14 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./dialog"
 import { Mail } from "lucide-react"
+import { sendMail } from "@/app/actions/sendMail"
+
+
 
 export function ContactForm() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -18,15 +24,29 @@ export function ContactForm() {
     message: "",
   })
 
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Form submitted:", form)
-    // EmailJS, Nodemailer, or API route
+    setLoading(true);
+    setStatus(null);
+
+    const res = await sendMail(form);
+
+    if(res.success) {
+      setStatus("Message sent successfully. Check email for confirmation.");
+      setForm({name: "", email: "", mobile: "", subject: "", message: ""})
+    }else{
+      setStatus("Failed to seeeeeeeeeend message");
+    }
+
+    setLoading(false); 
   }
+
 
   return (
     <Dialog>
@@ -53,12 +73,12 @@ export function ContactForm() {
 
           <div>
             {/* <Label htmlFor="email">Email</Label> */}
-            <Input id="email" name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required />
+            <Input id="email" name="email" type="email" placeholder="email@example.com" value={form.email} onChange={handleChange} required />
           </div>
 
           <div>
             {/* <Label htmlFor="mobile">Mobile Number</Label> */}
-            <Input id="mobile" name="mobile" type="tel" placeholder="+xx mobile no." value={form.mobile} onChange={handleChange} />
+            <Input id="mobile" name="mobile" type="tel" placeholder="+xx mobile no.(optional)" value={form.mobile} onChange={handleChange} />
           </div>
 
           <div>
@@ -70,10 +90,11 @@ export function ContactForm() {
             {/* <Label htmlFor="message">Message</Label> */}
             <Textarea id="message" name="message" placeholder="Type your message here..." value={form.message} onChange={handleChange} required />
           </div>
-          <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white">
-            Send Message
+          <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white" disabled={loading}>
+            {loading? "Sending..." : "Send Message"}
           </Button>
         </form>
+        {status && <p className="text-sm mt-2">{status}</p>}
       </DialogContent>
       </Dialog>
   )
