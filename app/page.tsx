@@ -1,9 +1,4 @@
 "use client"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, ExternalLink, ArrowRight } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
 import { Project1, Project2, Project3 } from "@/components/projects"
@@ -38,8 +33,8 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              A selection of recent work that showcases my skills in full-stack development, UI/UX design, and
+            <p className="text-gray-600 dark:text-muted-foreground max-w-2xl mx-auto">
+              A selection of recent work that showcases my skills in backend development, Web3 and
               problem-solving.
             </p>
           </div>

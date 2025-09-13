@@ -4,7 +4,6 @@ import { ThemeToggle } from "./theme-toggle"
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "./ui/sheet";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);

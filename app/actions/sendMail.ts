@@ -43,8 +43,6 @@ export async function sendMail(formData: {
         `,
     }
 
-    //const info = await transporter.sendMail(mailOptions);
-
 
     const mailOptionsToClient = {
         from: `"Samannyo Pal" <${process.env.SMTP_USERNAME}>`,
@@ -58,15 +56,18 @@ export async function sendMail(formData: {
         `,
         html: `
             <h2>Thank You for contacting Me.</h2>
-            <p style="font-size: 20px">Thank you for taking your time to provide me with your valuable feedback.</p>
-            <p><strong>Copy of the form you filled</strong></p>
-            <p><strong>Name:</strong> ${formData.name}</p>
-            <p><strong>Email:</strong> ${formData.email}</p>
-            <p><strong>Mobile:</strong> ${formData.mobile}</p>
-            <p><strong>Subject:</strong> ${formData.subject}</p>
-            <p><strong>Message:</strong></p>
+            <p style="font-size: 15px">Hey <strong>${formData.name}</strong>,</p>
+            <p style="font-size: 15px">Thank you for taking your time to check out my website and provide me with your valuable feedback. I truly appreaciate you taking the time to reach out.</p>
+            <p style="font-size: 20px"><strong>Copy of the form you filled</strong></p>
+            <p><strong style="font-size: 18px">Name:</strong> ${formData.name}</p>
+            <p><strong style="font-size: 18px">Email:</strong> ${formData.email}</p>
+            <p><strong style="font-size: 18px">Mobile:</strong> ${formData.mobile}</p>
+            <p><strong style="font-size: 18px">Subject:</strong> ${formData.subject}</p>
+            <p><strong style="font-size: 18px">Message:</strong></p>
             <p>${formData.message}</p>
-            <p style="font-size: 20px; margin-top: 100px">Thank u again. Hope to see u in next few days</p>
+            <p style="font-size: 18px; margin-top: 70px">Thank you again. Hope to see u in next few days</p>
+            <p>Warm regards,</p>
+            <p><strong>Samannyo Pal</strong></p>
         `,
     }
 

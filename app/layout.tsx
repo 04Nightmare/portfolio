@@ -2,6 +2,7 @@ import type React from "react"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
+import { Toaster } from "react-hot-toast"
 
 
 export default function RootLayout({
@@ -20,7 +21,10 @@ html {
 }
         `}</style>
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <Toaster position="top-right" reverseOrder={false} />
+      </body>
     </html>
   )
 }

@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./dialog"
 import { Mail } from "lucide-react"
 import { sendMail } from "@/app/actions/sendMail"
+import toast from "react-hot-toast"
 
 
 
@@ -38,10 +39,12 @@ export function ContactForm() {
     const res = await sendMail(form);
 
     if(res.success) {
-      setStatus("Message sent successfully. Check email for confirmation.");
+      // setStatus("Message sent successfully. Check email for confirmation.");
+      toast.success("Message sent Successfully. Check email for confirmation");
       setForm({name: "", email: "", mobile: "", subject: "", message: ""})
     }else{
-      setStatus("Failed to seeeeeeeeeend message");
+      // setStatus("Failed to seeeeeeeeeend message");
+      toast.error("Failed to send message");
     }
 
     setLoading(false); 

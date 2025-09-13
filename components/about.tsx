@@ -45,7 +45,7 @@ export default function AboutMe() {
     {name: "Python", icon: <FaPython/>},
   ]
     return(
-        <section id="about" className="py-20 px-6 bg-muted/30" ref={ref}>
+        <section id="about" className="py-20 px-6 bg-gray-200 dark:bg-muted/30" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -56,19 +56,19 @@ export default function AboutMe() {
           <div className="grid md:grid-cols-2 gap-30 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-5 underline">Sam.details</h2>
-              <div className="text-muted-foreground mb-3 leading-relaxed">
+              <div className="text-gray-600 dark:text-muted-foreground mb-3 leading-relaxed">
                 <span className="text-lg"> Location:</span>
                 <div className="px-4">
                   Kolkata, West Bengal..
                 </div>
               </div>
-              <div className="text-muted-foreground mb-3 leading-relaxed">
+              <div className="text-gray-600  dark:text-muted-foreground mb-3 leading-relaxed">
                 <span className="text-lg"> Interests:</span>
                 <div className="px-4">
                   Coding, PC building, Piano, Swimming, Cube Solving....
                 </div>
               </div>
-              <div className="text-muted-foreground mb-6 leading-relaxed">
+              <div className="text-gray-600  dark:text-muted-foreground mb-6 leading-relaxed">
                 <span className="text-lg"> Education: </span>
                 <div className="px-4">
                   B.Tech in Computer Science and System Engineering, KIIT University, Bhubaneshwar....
