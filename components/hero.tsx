@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react"
 import { ProfilePicture } from "./ui/logo"
 import { motion, useInView } from "framer-motion";
 import LoadingDots from "./loadingdots";
-import { useRef } from "react";
 
 export default function Hero() {
     return (
@@ -39,8 +38,11 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
         >
           <div>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-4">
+              "If debugging is the process of removing bugs, then developing must be the process of putting them in."
+            </p>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              "If debugging is the process of removing bugs, then programming is the process of putting them in."
+              "If, at first, you do not succeed, just call it version 1.0."
             </p>
             {/* <p className="text-xl text-muted-foreground mb-8 leading-relaxed">--by me</p> */}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -50,7 +52,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <a
-                href="https://drive.google.com/file/d/1QajRGE_NJQI9fwghIgwEATZ7710t13J_/view?usp=sharing"
+                href="https://drive.google.com/file/d/149Nt9u4gJ8DuI9csnIE1xjYTP83bOPE2/view?usp=sharing"
                 target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-1.5 text-lg font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 Resume.pdf

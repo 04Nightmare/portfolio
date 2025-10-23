@@ -1,7 +1,7 @@
 "use client"
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
-import { Project1, Project2, Project3 } from "@/components/projects"
+import { Project1, Project2 } from "@/components/projects"
 import AboutMe from "@/components/about"
 import Hero from "@/components/hero"
 import Navbar from "@/components/navigation"
@@ -50,10 +50,10 @@ export default function Portfolio() {
                 <Project1/>
 
                 {/* Project 2 */}
-                {/* <Project2/> */}
+                <Project2/>
 
                 {/* Project 3 */}
-                <Project3/>
+                {/* <Project3/> */}
               </div>
             </motion.div>
         </div>
