@@ -52,7 +52,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <a
-                href="https://drive.google.com/file/d/1sx5scJ8h0hBdVbMLWP-2YPD_BlnxLJVJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ycPNwCWz_SWPZ8Q_k9XVfxaeGGk50VoO/view?usp=sharing"
                 target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-1.5 text-lg font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 Resume.pdf
