@@ -1,7 +1,7 @@
 "use client"
 import Footer from "@/components/footer";
 import Contact from "@/components/contact";
-import { Project1, Project2 } from "@/components/projects"
+import { Project1, Project2, Project3 } from "@/components/projects"
 import AboutMe from "@/components/about"
 import Hero from "@/components/hero"
 import Navbar from "@/components/navigation"
@@ -45,7 +45,8 @@ export default function Portfolio() {
               transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
               className="max-w-6xl mx-auto"
             >
-              <div className="grid gap-10 md:grid-cols-2 md:m-30">
+              {/* <div className="grid gap-10 md:grid-cols-3 md:m-10"> */}
+               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Project 1 */}
                 <Project1/>
 
@@ -53,7 +54,7 @@ export default function Portfolio() {
                 <Project2/>
 
                 {/* Project 3 */}
-                {/* <Project3/> */}
+                <Project3/>
               </div>
             </motion.div>
         </div>

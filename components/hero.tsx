@@ -5,8 +5,11 @@ import { ArrowRight } from "lucide-react"
 import { ProfilePicture } from "./ui/logo"
 import { motion, useInView } from "framer-motion";
 import LoadingDots from "./loadingdots";
+import { Dialog, DialogContent, DialogTitle } from "./ui/dialog";
+import { useState } from "react";
 
 export default function Hero() {
+  const [open, setOpen] = useState(false)
     return (
         <section className="pt-32 pb-20 px-6" id="hero">
         <div className="max-w-6xl mx-auto flex flex-wrap gap-x-10">
@@ -14,6 +17,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
+            onClick={() => setOpen(true)}
+            className="cursor-pointer"
           >
             <ProfilePicture src="/pictures/sampic.jpg" size={175}/>
           </motion.div>
@@ -52,7 +57,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <a
-                href="https://drive.google.com/file/d/1ycPNwCWz_SWPZ8Q_k9XVfxaeGGk50VoO/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ZYchQFpgMin1ssrX1HEEnF67hLqnpqnu/view?usp=sharing"
                 target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-1.5 text-lg font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 Resume.pdf
@@ -60,6 +65,20 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
+
+        {/* Dialog */}
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogContent className="max-w-3xl p-0 bg-transparent border-none">
+            <DialogTitle className="sr-only">
+              Profile Picture
+            </DialogTitle>
+            <img
+              src="/pictures/sampic.jpg"
+              alt="Full Profile"
+              className="w-full h-auto rounded-lg"
+            />
+          </DialogContent>
+        </Dialog>
       </section>
     )
 }
